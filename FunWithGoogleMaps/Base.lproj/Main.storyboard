@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KNT-Qs-Wqc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Map-->
+        <scene sceneID="KKu-8Y-FuM">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="f4H-f9-WE1" customClass="MapViewController" customModule="FunWithGoogleMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cvx-Oi-wto">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mDT-sg-CTs"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="JCd-py-axa"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICh-gK-LVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="780" y="273"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="5bK-u7-G0B">
+            <objects>
+                <viewController id="iHy-2p-SS0" customClass="MainViewController" customModule="FunWithGoogleMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pr4-fz-eCA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPL-2G-rcY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Fun With Google Maps!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXb-Eg-dhE">
+                                        <rect key="frame" x="50.5" y="16" width="274" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="AYc-XS-1QU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pSS-ju-Jz5">
+                                        <rect key="frame" x="8" y="62" width="359" height="528"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FXb-Eg-dhE" firstAttribute="top" secondItem="HPL-2G-rcY" secondAttribute="top" constant="16" id="1YI-a1-cyq"/>
+                                    <constraint firstItem="pSS-ju-Jz5" firstAttribute="top" secondItem="FXb-Eg-dhE" secondAttribute="bottom" constant="16" id="DGv-Va-aD8"/>
+                                    <constraint firstItem="pSS-ju-Jz5" firstAttribute="leading" secondItem="HPL-2G-rcY" secondAttribute="leading" constant="8" id="GEK-wo-aVW"/>
+                                    <constraint firstAttribute="bottom" secondItem="pSS-ju-Jz5" secondAttribute="bottom" constant="8" id="X86-1U-2PX"/>
+                                    <constraint firstItem="FXb-Eg-dhE" firstAttribute="centerX" secondItem="HPL-2G-rcY" secondAttribute="centerX" id="unj-MO-OZ0"/>
+                                    <constraint firstAttribute="trailing" secondItem="pSS-ju-Jz5" secondAttribute="trailing" constant="8" id="vCb-EB-1ZU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HPL-2G-rcY" firstAttribute="leading" secondItem="Cxz-gf-OH9" secondAttribute="leading" id="21n-KE-1ef"/>
+                            <constraint firstItem="Cxz-gf-OH9" firstAttribute="top" secondItem="HPL-2G-rcY" secondAttribute="top" id="6uz-hB-hwb"/>
+                            <constraint firstItem="Cxz-gf-OH9" firstAttribute="bottom" secondItem="HPL-2G-rcY" secondAttribute="bottom" id="RUa-oh-5pN"/>
+                            <constraint firstItem="Cxz-gf-OH9" firstAttribute="trailing" secondItem="HPL-2G-rcY" secondAttribute="trailing" id="dvD-ew-hu8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cxz-gf-OH9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="VFP-Yw-hmq"/>
+                    <connections>
+                        <outlet property="mainTextView" destination="pSS-ju-Jz5" id="vh1-8y-FS3"/>
+                        <outlet property="mainTitle" destination="FXb-Eg-dhE" id="Ul9-e3-oGH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6FH-aD-jdI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778.39999999999998" y="-392.65367316341832"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zLm-Cg-B4F">
+            <objects>
+                <tabBarController id="KNT-Qs-Wqc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jwm-Lt-eWn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iHy-2p-SS0" kind="relationship" relationship="viewControllers" id="ALn-WI-Ug0"/>
+                        <segue destination="f4H-f9-WE1" kind="relationship" relationship="viewControllers" id="Ud8-bI-zZy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIY-JR-7jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="-59"/>
         </scene>
     </scenes>
 </document>

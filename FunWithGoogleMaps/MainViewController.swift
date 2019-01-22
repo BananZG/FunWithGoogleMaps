@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  FunWithGoogleMaps
 //
 //  Created by Gan Jun Jie on 22/01/2019.
@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import GoogleMaps
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    @IBOutlet weak var mainTitle: UILabel!
+    @IBOutlet weak var mainTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.mainTextView.text = GMSServices.openSourceLicenseInfo()
     }
 
 
